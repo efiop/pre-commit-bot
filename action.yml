@@ -1,0 +1,10 @@
+name: 'Pre-commit'
+description: Automatically run pre-commit hooks for PRs
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding: 
+  icon: git-commit
+  color: green
