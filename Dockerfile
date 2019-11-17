@@ -9,10 +9,8 @@ LABEL "repository"="https://github.com/efiop/pre-commit-bot"
 LABEL "homepage"="https://github.com/efiop/pre-commit-bot"
 LABEL "maintainer"="Ruslan Kuprieiev <kupruser@gmail.com>"
 
-RUN wget https://github.com/github/hub/releases/download/v2.13.0/hub-linux-amd64-2.13.0.tgz -O hub
 RUN pip install pre-commit
 
-COPY hub /hub
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["bash", "/entrypoint.sh"]
