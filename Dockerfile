@@ -1,4 +1,4 @@
-FROM alpine/git:1.0.7
+FROM python/3.7.5-buster
 
 LABEL "com.github.actions.name"="Pre-commit"
 LABEL "com.github.actions.description"="Automatically run pre-commit hooks for your PRs"
