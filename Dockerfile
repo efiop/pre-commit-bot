@@ -9,7 +9,7 @@ LABEL "repository"="https://github.com/efiop/pre-commit-bot"
 LABEL "homepage"="https://github.com/efiop/pre-commit-bot"
 LABEL "maintainer"="Ruslan Kuprieiev <kupruser@gmail.com>"
 
-RUN apt install git
+RUN apt-get install git
 RUN snap install hub
 RUN pip install pre-commit
 
