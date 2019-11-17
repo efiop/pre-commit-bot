@@ -20,8 +20,9 @@ if [ -f "./.pre-commit-config.yaml" ]; then
     reformat=false
     pre-commit run --all-files || reformat=true
     if [[ "$reformat" == "true" ]]; then
-        echo $GITHUB_REF
-        git checkout -b "${GITHUB_REF##*/}-reformatted"
+        # e.g. refs/pull/7/merge -> 7
+        PR_NUM=$(echo $GITHUB_REF | cut -d '/' -f 3)
+        git checkout -b "$PR_NUM-reformatted"
         git add .
         git commit -m "Run pre-commit hooks"
     fi
