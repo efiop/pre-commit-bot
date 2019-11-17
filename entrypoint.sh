@@ -16,10 +16,10 @@ git config --global user.email "actions@github.com"
 
 git status
 
-if [ -f "./pre-commit.yml" ]; then
+if [ -f "./pre-commit-config.yaml" ]; then
     local reformat=0
     pre-commit run --all-files || reformat=1
     echo $reformat
 else
-    echo "'pre-commit.yml' is not found"
+    echo "'pre-commit-config.yaml' is not found"
 fi
