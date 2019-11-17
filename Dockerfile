@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 LABEL "com.github.actions.name"="Pre-commit"
 LABEL "com.github.actions.description"="Automatically run pre-commit hooks for your PRs"
