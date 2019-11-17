@@ -21,11 +21,13 @@ if [ -f "./.pre-commit-config.yaml" ]; then
     pre-commit run --all-files || reformat=true
     if [[ "$reformat" == "true" ]]; then
         # e.g. refs/pull/7/merge -> 7
-        BRANCH="$(echo $GITHUB_REF | cut -d '/' -f 3)"-reformatted
+        PR="$(echo $GITHUB_REF | cut -d '/' -f 3)"
+        BRANCH="$PR-reformatted"
         git checkout -b $BRANCH
         git add .
         git commit -m "Run pre-commit hooks"
-        git push --force -u origin $BRANCH 
+        git push --force -u origin $BRANCH
+        hub pull-request -m "Run pre-commit hooks for #$PR"
     fi
 else
     echo "'pre-commit-config.yaml' is not found"
