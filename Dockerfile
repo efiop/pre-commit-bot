@@ -9,7 +9,7 @@ LABEL "repository"="https://github.com/efiop/pre-commit-bot"
 LABEL "homepage"="https://github.com/efiop/pre-commit-bot"
 LABEL "maintainer"="Ruslan Kuprieiev <kupruser@gmail.com>"
 
-pip install pre-commit
+RUN pip install pre-commit
 
 COPY entrypoint.sh /entrypoint.sh
 
