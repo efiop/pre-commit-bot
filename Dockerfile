@@ -13,4 +13,4 @@ RUN pip install pre-commit
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["sh", "/entrypoint.sh"]
+ENTRYPOINT ["bash", "/entrypoint.sh"]
