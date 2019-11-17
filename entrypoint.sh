@@ -20,9 +20,9 @@ if [ -f "./.pre-commit-config.yaml" ]; then
     reformat=false
     pre-commit run --all-files || reformat=true
     if [[ "$reformat" == "true" ]]; then
+        git branch -b "${GITHUB_REF##*/}-reformatted"
         git add .
         git commit -m "Run pre-commit hooks"
-        git push
     fi
 else
     echo "'pre-commit-config.yaml' is not found"
