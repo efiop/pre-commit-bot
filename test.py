@@ -1,28 +1,7 @@
-import   os
+import os
 
 
-
-
-
-print("very"
-      
-"odd"
-      
-   
-      
-"formatting"
-)
-
-
-
-
-
-
-
-
+print("very" "odd" "formatting")
 
 
 # another comment
-
-
-
