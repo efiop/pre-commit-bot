@@ -12,6 +12,4 @@ print("very"
 
 
 
-
-
 # another comment
