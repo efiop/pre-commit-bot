@@ -25,7 +25,7 @@ if [ -f "./.pre-commit-config.yaml" ]; then
         git checkout -b "$PR_NUM-reformatted"
         git add .
         git commit -m "Run pre-commit hooks"
-        git request-pull master ./
+        git request-pull origin/master ./
     fi
 else
     echo "'pre-commit-config.yaml' is not found"
