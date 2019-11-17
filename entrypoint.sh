@@ -15,3 +15,9 @@ git config --global user.name "Pre-commit GitHub Action"
 git config --global user.email "actions@github.com"
 
 git status
+
+if [ -f "./pre-commit.yml" ]; then
+    pre-commit run --all-files
+else
+    echo "'pre-commit.yml' is not found"
+fi
