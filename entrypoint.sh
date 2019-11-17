@@ -19,7 +19,7 @@ git status
 if [ -f "./.pre-commit-config.yaml" ]; then
     reformat=false
     pre-commit run --all-files || reformat=true
-    if [[ "$reformat" == "true" ]]; then
+    if [ "$reformat" == "true" ]; then
         git add .
         git commit -m "Run pre-commit hooks"
         git push
